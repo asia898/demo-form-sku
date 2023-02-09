@@ -6,10 +6,12 @@ import {
 } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { DemoFormSku } from './demo-form-sku.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemoFormSku
   ],
   imports: [
     BrowserModule,
