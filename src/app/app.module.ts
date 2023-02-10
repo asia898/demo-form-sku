@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { DemoFormSkuComponent } from './demo-form-sku.component';
 import { DemoFormSkuWithBuilderComponent } from './demo-form-sku-with-builder/demo-form-sku-with-builder.component'
 import { DemoFormWithValidations } from './demo-form-with-validations/demo-form-with-validations.component';
+import { DemoFormWithValidationsNoInstance } from './demo-form-with-validations-no-instance/demo-form-with-validations-no-instance.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoFormSkuComponent,
     DemoFormSkuWithBuilderComponent,
-    DemoFormWithValidations
+    DemoFormWithValidations,
+    DemoFormWithValidationsNoInstance
   ],
   imports: [
     BrowserModule,
