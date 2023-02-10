@@ -3,14 +3,19 @@
     <h2 class="ui header">Demo Form: With Validations</h2>
     <form [formGroup]="myForm"
         (ngSubmit)="onSubmited(myForm.value)"
-        class="ui form">
-        <div class="field">
+        class="ui form"
+        [class.error]="!myForm.valid && myForm.touched">
+        <div class="field"
+            [class.error]="!myForm.valid && zipCode.touched">
             <label for="zipCodeInput">Zip Code</label>
             <input type="text"
                 id="zipCodeInput"
                 placeholder="zipCode"
-                [formControl]="$any(myForm.controls['zipCode'])">
+                [formControl]="$any(zipCode)">
+            <div *ngIf="!zipCode.valid" class="ui error message">Zip Code is invalid</div>
+            <div *ngIf="zipCode.hasError('required')" class="ui error message">Zip Code is required</div>
         </div>
+        <div *ngIf="!myForm.valid" class="ui error message">Form is invalid</div>
         <button type="submit" class="ui button">Submit</button>
     </form>
 </div>
