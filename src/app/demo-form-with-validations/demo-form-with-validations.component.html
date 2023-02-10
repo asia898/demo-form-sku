@@ -1,0 +1,16 @@
+
+<div class="ui raised segment">
+    <h2 class="ui header">Demo Form: With Validations</h2>
+    <form [formGroup]="myForm"
+        (ngSubmit)="onSubmited(myForm.value)"
+        class="ui form">
+        <div class="field">
+            <label for="zipCodeInput">Zip Code</label>
+            <input type="text"
+                id="zipCodeInput"
+                placeholder="zipCode"
+                [formControl]="$any(myForm.controls['zipCode'])">
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+    </form>
+</div>

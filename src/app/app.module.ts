@@ -8,12 +8,14 @@ import {
 import { AppComponent } from './app.component';
 import { DemoFormSkuComponent } from './demo-form-sku.component';
 import { DemoFormSkuWithBuilderComponent } from './demo-form-sku-with-builder/demo-form-sku-with-builder.component'
+import { DemoFormWithValidations } from './demo-form-with-validations/demo-form-with-validations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoFormSkuComponent,
-    DemoFormSkuWithBuilderComponent
+    DemoFormSkuWithBuilderComponent,
+    DemoFormWithValidations
   ],
   imports: [
     BrowserModule,
