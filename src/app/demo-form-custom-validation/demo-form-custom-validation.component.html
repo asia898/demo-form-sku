@@ -1,0 +1,16 @@
+
+<div class="ui raised segment">
+    <h2 class="ui header">Birth Date. Custom Validation</h2>
+    <form [formGroup]="myForm"
+        (ngSubmit)="onSubmit(myForm.value)"
+        class="ui form">
+        <div class="field">
+            <label for="birthDateInput">Birth Date</label>
+            <input type="text"
+                id="birthDateInput"
+                placeholder="birthDate"
+                [formControl]="$any(myForm.controls['birthDate'])">
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+    </form>
+</div>
