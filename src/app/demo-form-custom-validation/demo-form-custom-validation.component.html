@@ -1,6 +1,12 @@
 
 <div class="ui raised segment">
     <h2 class="ui header">Birth Date. Custom Validation</h2>
+    <div *ngIf="!myForm.valid && myForm.touched"
+        class="ui error message">The form is not valid</div>
+    <div *ngIf="myForm.controls['birthDate'].hasError('invalidBirthDate') && myForm.controls['birthDate'].touched" 
+        class="ui error message">Birth Date must be a date <span>DD-MM-YYYY or DD/MM/YYYY</span></div>
+    <div *ngIf="myForm.controls['birthDate'].hasError('required') && myForm.controls['birthDate'].touched" 
+        class="ui error message">Birth date is required</div>
     <form [formGroup]="myForm"
         (ngSubmit)="onSubmit(myForm.value)"
         class="ui form">
@@ -13,4 +19,5 @@
         </div>
         <button type="submit" class="ui button">Submit</button>
     </form>
+    
 </div>
